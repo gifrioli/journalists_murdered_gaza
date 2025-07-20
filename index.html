@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mapa de Jornalistas Mortos (2018-2025)</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <!-- Adicionado: Biblioteca SheetJS para ler arquivos XLSX -->
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="header with-image-bg">
+        <div class="content">
+            <h1>Journalists Cut Short</h1>
+            <p class="subhead">Gaza has become a graveyard for reporters during the war</p>
+            <p class="byline">By: Giovana Frioli</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>
+            Data from the Committee to Protect Journalists (CPJ) warn that the war in Gaza has already left at least 164 journalists dead, with hundreds more still under investigation.
+            The conflict, which began on October 7, 2023 — and has not yet ended — has become the deadliest ever recorded for media professionals since 1992.
+        </p>
+        <p>
+            Journalists are civilians and are protected by International Law during the exercise of their work. Deliberate attacks against these professionals constitute a war crime.
+            The CPJ portal
+            <a href="https://cpj.org/2023/10/journalist-casualties-in-the-israel-gaza-conflict/" target="_blank" rel="noopener noreferrer">reports</a>
+            that the majority of those killed are Palestinians, while two of the journalists murdered are Israelis.
+            Furthermore, more than 200 reporters have been injured, are missing, or detained.
+        </p>
+        <p>
+            The group of journalists killed in the war between Israel and Hamas represents the number of reporters in a large newsroom in Brazil.
+            Newspapers like Folha de S. Paulo or Estadão, which have national circulation and about 200 to 300 journalists,
+            would lose the majority of their reporters in just two years.
+        </p>
+    </div>
+
+    <div class="gaza-deaths-section">
+        <div class="content">
+            <h2>Journalists Killed in the Gaza War</h2>
+            <p>This visualization represents each of the journalists killed during the war in Gaza, individually highlighting them by name and date of death.</p>
+        </div>
+        <div class="gaza-deaths-container">
+            <svg class="gaza-chart-svg"></svg>
+            <div class="gaza-tooltip tooltip"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>
+            With the collected data, it was possible to visualize the severity of journalist deaths in the territory considered between Israel and Palestine.
+            The CPJ reports that, since the beginning of the war, journalists have been working without protection, equipment, international presence,
+            communication, and with shortages of water and food.
+        </p>
+    </div>
+
+    <div class="map-container">
+        <svg></svg>
+        <div class="tooltip"></div>
+    </div>
+
+    <div class="content">
+        <p>
+            Deaths of journalists in Gaza accounted for 74% of all deaths worldwide in recent years.
+            In 2024, the number broke the record, reaching 76 people.
+            By July of this year, 23 had been killed in the war.
+            Despite the official CPJ count, the number of professionals may exceed 200, according to the estimate by the NGO Reporters Without Borders (RSF).
+        </p>
+
+        <!-- Inserção do gráfico Datawrapper logo após o parágrafo -->
+        <iframe
+            title="Deaths of Journalists by Year"
+            aria-label="Column Chart"
+            id="datawrapper-chart-zlitA"
+            src="https://datawrapper.dwcdn.net/zlitA/1/"
+            scrolling="no"
+            frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;"
+            height="460"
+            data-external="1"
+        ></iframe>
+        <script type="text/javascript">
+            !function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                    if (void 0 !== a.data["datawrapper-height"]) {
+                        var e = document.querySelectorAll("iframe");
+                        for (var t in a.data["datawrapper-height"])
+                            for (var r, i = 0; r = e[i]; i++)
+                                if (r.contentWindow === a.source) {
+                                    var d = a.data["datawrapper-height"][t] + "px";
+                                    r.style.height = d;
+                                }
+                    }
+                });
+            }();
+        </script>
+
+        <div class="footer">
+        <div class="content">
+            <p>You can find the code for this project at <a href="https://github.com/gifrioli">https://github.com/gifrioli</a>. This was the second project of the Lede Program for Data Journalism 2025.</p>
+
+            <p>The site template was created by Jonathan Soma <a href="https://github.com/jsoma/page-templates/">here</a>.</p>
+        </div>
+    </div>
+
+    <script src="gaza-deaths-chart.js"></script> <!-- Moved this script to load first -->
+    <script src="map.js"></script>
+</body>
+</html>

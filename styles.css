@@ -1,0 +1,219 @@
+/* Importação da fonte Forum do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+/* Estilos do D3.js e do seu mapa */
+.country {
+    stroke: #aaa;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 18px; /* Aumentado o padding para tornar a caixa maior */
+    border-radius: 4px;
+    border: 1px solid #888;
+    pointer-events: none;
+    font-size: 16px; /* Aumentado o tamanho da fonte */
+    display: none;
+    line-height: 1.5; /* Melhorar a legibilidade */
+}
+
+.map-container {
+    width: 100%;
+    height: 90vh; /* Ajuste a altura conforme necessário */
+    margin-top: 2em;    /* Adiciona espaço acima do mapa */
+    margin-bottom: 2em; /* Adiciona espaço abaixo do mapa */
+}
+
+/* Restante do CSS do seu template */
+
+/* Aplicar Forum para todo o site */
+body {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Forum', serif;
+    text-rendering: optimizeLegibility;
+    background-color: #ffffff;
+    color: black;
+    /* Removido background-image, background-size, background-repeat, background-position do body */
+}
+
+.content {
+    max-width: 640px;
+    margin: auto;
+}
+
+.header {
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000;            /* Texto preto */
+    padding: 3em 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;     /* Alinha título e subtítulo à direita */
+}
+
+.header h1,
+.header .subhead {
+    font-family: 'Forum', serif;
+    color: #000000;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.subhead {
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.byline {
+    font-size: 1.0em;
+    margin-top: 0.2em;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;              /* ocupa toda a largura da página */
+    background: #ffffffcf;      /* cor desejada */
+    color: rgb(0, 0, 0);             /* texto claro */
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 2em;          /* distância do conteúdo acima */
+    padding: 2em 0;           /* espaço interno vertical */
+}
+
+figure {
+    margin: 0;
+    padding-bottom: 1.2em;
+}
+
+figcaption {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 0.5em;
+    color: #666;
+}
+
+.full-width figure {
+    text-align: center;
+}
+
+iframe,
+img,
+video {
+    max-width: 100%;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 1.2em;
+}
+
+ul {
+    margin: 0;
+    padding-bottom: 1em;
+    line-height: 1.6;
+}
+
+iframe {
+    padding-bottom: 1.2em;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background: #fff880;
+}
+
+.with-image-bg,
+.with-video-bg {
+    position: relative;
+    /* background-size: cover; -- Removido para permitir background-size personalizado */
+    margin-bottom: 2em;
+
+    /* Center everything inside */
+    min-height: 70svh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    /* White text with a shadow */
+    color: black;
+}
+
+.with-image-bg {
+    background-image: url('bg-image.png'); /* Usando background.jpg para o cabeçalho */
+    background-size: 350px 350px; /* Define o tamanho da imagem de fundo para pequena */
+    background-repeat: no-repeat;
+    background-position: 300px 300px;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* New Gaza Deaths Chart Styles */
+.gaza-deaths-section {
+    margin-top: 4em;
+    padding-top: 2em;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.gaza-deaths-container {
+    max-width: 100%;
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.gaza-chart-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.journalist-icon {
+    stroke: #ccc;
+    stroke-width: 0.5px;
+    transition: fill 0.2s ease-in-out;
+}
+
+.journalist-icon:hover {
+    fill: #007bff;
+    cursor: pointer;
+}
+
+/* margin on mobile */
+@media (max-width: 640px) {
+    body {
+        font-size: 18px;
+    }
+
+    .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
