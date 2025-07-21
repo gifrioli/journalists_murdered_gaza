@@ -5,7 +5,7 @@ Project 2, Lede Program 2025
 This repository has a dataset and HTML code for my second project in the Lede Program for Data Journalism at Columbia University.
 
 # Project 
-Based on the data and tables provided by the Committee to Protect Journalists, I tried to develop an individual visualization of journalists killed in the war in Gaza between 2023 and 2025. This is initially a visualization project, but it was interesting for my learning.
+Based on the data and tables provided by the Committee to Protect Journalists, I tried to develop an individual visualization of journalists killed in the war in Gaza between 2023 and 2025.  This is a beginner visualization project, but it was valuable for my learning.
 
 You can access the project [here](https://gifrioli.github.io/journalists_murdered_gaza/).
 
